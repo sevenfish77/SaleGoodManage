@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.yzgs.domain.OtherProject">
+
+	<resultMap type="com.yzgs.domain.OtherProject" id="OtherProject">
+	    <id column="id" property="id"  jdbcType="VARCHAR"/>
+	    <result column="projectName" property="projectName" jdbcType="VARCHAR"/>
+	    <result column="projectPrice" property="projectPrice" jdbcType="DOUBLE"/>
+	    <result column="projectDate" property="projectDate" jdbcType="DATE"/>
+	    <result column="projectRemark" property="projectRemark" jdbcType="VARCHAR"/>
+	</resultMap>
+	
+
+	
+	<!-- 注意分页查询与查询所有的相同与不同点 -->
+	<select id="selectForPage" resultMap="OtherProject"  parameterType="com.yzgs.domain.Page">
+	    
+		select * from OtherProject
+		<where>
+			 <if test="params.projectName!=null and params.projectName!='' ">
+			 projectName LIKE CONCAT(CONCAT('%', #{params.projectName}),'%') 
+		    </if>
+		  
+		   
+		</where>
+	</select>
+	
+	
+	<insert id="create"  parameterType="com.yzgs.domain.OtherProject">
+	      insert into  OtherProject(id,projectName,projectPrice,projectDate,projectRemark)
+	      values(#{id,jdbcType=VARCHAR},#{projectName,jdbcType=VARCHAR},#{projectPrice,jdbcType=DOUBLE},#{projectDate,jdbcType=DATE},#{projectRemark,jdbcType=VARCHAR})
+	      
+	</insert>
+	
+	<update id="update"  parameterType="com.yzgs.domain.OtherProject" >
+	      update OtherProject
+	      <set>
+	            <if test="projectName!=null and projectName!=''">
+	                 projectName=#{projectName,jdbcType=VARCHAR},
+	            </if>
+	             <if test="projectPrice!=null and projectPrice!=''">
+	                 projectPrice=#{projectPrice,jdbcType=DOUBLE},
+	            </if>
+	            <if test="projectDate!=null and projectDate!=''">
+	                 projectDate=#{projectDate,jdbcType=DATE},
+	            </if>
+	            <if test="projectRemark!=null and projectRemark!=''">
+	                 projectRemark=#{projectRemark,jdbcType=VARCHAR},
+	            </if>
+	          
+	           
+	           
+	      </set>
+	      where id=#{id,jdbcType=VARCHAR}
+	</update>
+	
+	
+	
+	<delete id="delete" parameterType="java.lang.String">
+	   delete from OtherProject where id=#{id,jdbcType=VARCHAR}
+	
+	</delete>
+	
+	<select id="selectByPk" parameterType="java.lang.String" resultMap="OtherProject">
+	    select * from OtherProject   where id=#{id,jdbcType=VARCHAR}
+	</select>
+	
+</mapper>
+

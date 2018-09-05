@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.yzgs.domain.GoodCategory">
+
+	<resultMap type="com.yzgs.domain.GoodCategory" id="GoodCategory">
+	    <id column="id" property="id"  jdbcType="VARCHAR"/>
+	    <result column="categoryBh" property="categoryBh" jdbcType="VARCHAR"/>
+	    <result column="categoryName" property="categoryName" jdbcType="VARCHAR"/>
+	</resultMap>
+	
+
+	
+	<!-- 注意分页查询与查询所有的相同与不同点 -->
+	<select id="selectForPage" resultMap="GoodCategory"  parameterType="com.yzgs.domain.Page">
+	    
+		select * from goodcategory
+		<where>
+			 <if test="params.categoryName!=null and params.categoryName!='' ">
+			 categoryName LIKE CONCAT(CONCAT('%', #{params.categoryName}),'%') 
+		    </if>
+		  
+		   
+		</where>
+	</select>
+	
+	
+	<insert id="create"  parameterType="com.yzgs.domain.GoodCategory">
+	      insert into goodcategory(id,categoryBh,categoryName)
+	      values(#{id,jdbcType=VARCHAR},#{categoryBh,jdbcType=VARCHAR},#{categoryName,jdbcType=VARCHAR})
+	      
+	</insert>
+	
+	<update id="update"  parameterType="com.yzgs.domain.GoodCategory" >
+	      update goodcategory
+	      <set>
+	            <if test="categoryBh!=null and categoryBh!=''">
+	                 categoryBh=#{categoryBh,jdbcType=VARCHAR},
+	            </if>
+	             <if test="categoryName!=null and categoryName!=''">
+	                 categoryName=#{categoryName,jdbcType=VARCHAR},
+	            </if>
+	          
+	           
+	           
+	      </set>
+	      where id=#{id,jdbcType=VARCHAR}
+	</update>
+	
+	
+	
+	<delete id="delete" parameterType="java.lang.String">
+	   delete from goodcategory   where id=#{id,jdbcType=VARCHAR}
+	
+	</delete>
+	
+	<select id="selectByPk" parameterType="java.lang.String" resultMap="GoodCategory">
+	    select * from goodcategory  where id=#{id,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="selectAllGoodCategory" resultMap="GoodCategory">
+	   select * from goodcategory 
+	</select>
+	
+	<select id="checkGoodCategoryStore" parameterType="java.lang.String" resultType="java.lang.Integer">
+	
+	   select count(1) as num from goodStore   a left join good b on a.goodId=b.id where b.goodcategoryid=#{goodcategoryid,jdbcType=VARCHAR}
+	  
+	</select>
+	
+</mapper>
+

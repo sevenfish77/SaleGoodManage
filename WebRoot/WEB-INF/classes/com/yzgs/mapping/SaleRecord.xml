@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.yzgs.domain.SaleRecord">
+
+	<resultMap type="com.yzgs.domain.SaleRecord" id="SaleRecord">
+	    <id column="id" property="id"  jdbcType="VARCHAR"/>
+	    <result column="saleNum" property="saleNum" jdbcType="INTEGER"/>
+	    <result column="storePh" property="storePh" jdbcType="VARCHAR"/>
+	    <result column="salePrice" property="salePrice" jdbcType="DOUBLE"/>
+	    <result column="saleMoney" property="saleMoney" jdbcType="DOUBLE"/>
+	    <result column="saleDate" property="saleDate" jdbcType="DATE"/>
+	 
+	</resultMap>
+	
+	<!-- 根据入库批号,查询商品名,商品单价,折扣系数, -->
+	<resultMap type="com.yzgs.domain.SaleProperties" id="SaleProperties">
+	
+	    <result column="name" property="name" jdbcType="VARCHAR"/>
+	    <result column="price" property="price" jdbcType="DOUBLE"/>
+	    <result column="xs" property="xs" jdbcType="DOUBLE"/>
+	    <result column="goodValidDate" property="goodValidDate" jdbcType="DATE"/>
+	   
+	</resultMap>
+	
+
+	
+	<!-- 注意分页查询与查询所有的相同与不同点 -->
+	<select id="selectForPage" resultMap="SaleRecord"  parameterType="com.yzgs.domain.Page">
+	    
+		select * from SaleRecord
+		<where>
+		
+			 <if test="params.saleDate_Min!=null and params.saleDate_Min!=''">
+			  AND DATEDIFF(saleDate, #{params.saleDate_Min})&gt;=0
+		    </if>
+		    <if test="params.saleDate_Max!=null and params.saleDate_Max!=''">
+			  AND DATEDIFF(saleDate, #{params.saleDate_Max})&lt;=0
+		    </if>
+		  
+		   
+		</where>
+	</select>
+	
+	
+	<insert id="create"  parameterType="com.yzgs.domain.SaleRecord">
+	      insert into  SaleRecord(id,saleNum,storePh,salePrice,saleMoney,saleDate)
+	      values(#{id,jdbcType=VARCHAR},#{saleNum,jdbcType=INTEGER},#{storePh,jdbcType=VARCHAR},#{salePrice,jdbcType=DOUBLE},#{saleMoney,jdbcType=DOUBLE},#{saleDate,jdbcType=DATE})
+	      
+	</insert>
+	
+	
+	
+	
+	
+	<delete id="delete" parameterType="java.lang.String">
+	   delete from SaleRecord where id=#{id,jdbcType=VARCHAR}
+	
+	</delete>
+	
+	<select id="selectByPk" parameterType="java.lang.String" resultMap="SaleRecord">
+	    select * from SaleRecord    where id=#{id,jdbcType=VARCHAR}
+	</select>
+	
+	
+	<select id="selectSalePropertiesByStorePh" parameterType="java.lang.String" resultMap="SaleProperties">
+	   select a.storePh,a.goodXs as xs,a.goodValidDate,b.goodname as name,b.goodprice as price,b.storeMin as goodNumXx ,(a.storeNum-IFNULL(c.saleNum,0)-IFNULL(d.guoqiNum,0)) as kcNum from goodstore a left join good b on a.goodid=b.id 
+		left join (select IFNULL(sum(saleNum),0) as saleNum,storePh from salerecord group by storePh) c 
+		on a.storePh=c.storePh
+		left join (select sum(goodNum) as guoqiNum,storePh from goodguoqi group by storeph) d 
+		on a.storePh=d.storePh where a.storePh=#{storePh,jdbcType=VARCHAR}
+	
+	</select>
+	
+</mapper>
+

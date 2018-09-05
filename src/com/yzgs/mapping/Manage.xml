@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.yzgs.domain.Manage">
+
+	<resultMap type="com.yzgs.domain.Manage" id="Manage">
+	    <id column="ID" property="id"  jdbcType="VARCHAR"/>
+	    <result column="NAME" property="name" jdbcType="VARCHAR"/>
+	    <result column="ACCOUNT" property="account" jdbcType="VARCHAR"/>
+	    <result column="PASSWORD" property="password" jdbcType="VARCHAR"/>
+	  
+	
+	
+	</resultMap>
+	
+
+	
+	
+	<select id="getManageByAccount" parameterType="java.lang.String" resultMap="Manage">
+	   select * from Manage where account=#{account}
+	
+	</select>
+	
+	
+	<update id="updateMm" parameterType="com.yzgs.domain.Manage">
+	   update Manage set password=#{password} where id=#{id}
+	</update>
+	
+</mapper>
+

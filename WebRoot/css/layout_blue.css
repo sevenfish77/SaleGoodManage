@@ -1,0 +1,563 @@
+/*****by huqing 2015-1-6****/
+/*****************************   public css start!!!   ****************************/
+* {
+	margin:0px;
+	padding:0px;
+}
+.center{margin:0px auto;width:500px;}
+.center2{margin:10px auto;width:180px;}
+.left {
+	float:left;
+}
+.right {
+	float:right;
+}
+.clear {
+	clear:both;
+}
+ul,li {
+	list-style:none;
+}
+a.link1 {
+	color:#ffffff;
+	text-decoration:none;	
+}
+a.link1:hover {
+	text-decoration:underline;
+}
+a.link1 {
+	color:#ffffff;
+}
+img {
+	border:0px;
+}
+/*****************************   public css end!!!     ****************************/
+/***************************** north.html css start!!! ****************************/
+.topBox {
+	height:88px;
+	background:url(../images/blue/top_bg.jpg) no-repeat right top;
+}
+.topBox2 {
+	height:88px;
+	width:100%;
+}
+.top_right_links ul li {
+	float:right;
+	margin-right:15px;
+}
+.top_right_links ul li a {
+	display:block;
+	tetxt-decoration:none;
+}
+a.help {
+	background:url(../images/blue/top_icon.png) 0 0px no-repeat;
+	padding-left:20px;
+	text-decoration:none;
+	color:#CEEAF6;		
+}
+a.exit {
+	padding-top:1px;
+	text-decoration:none;
+	color:#CEEAF6;	
+}
+a.help:hover,a.exit:hover {
+	color:#f6ff00;
+}
+.line {
+	background:url(../images/blue/top_icon.png) 0 -62px no-repeat;
+	height:14px;
+	width:5px;
+}
+.top_infobox {
+	padding-top:10px;
+}
+.top_user {
+	color:#ceeaf6;
+	text-align:right;
+	padding-right:10px;
+	margin-top:10px;
+}
+.user {
+	background:url(../images/blue/top_icon.png) 0 -126px no-repeat;
+	height: 15px;
+	padding-left:20px;
+}
+.user_info {
+	padding:1px 4px;
+	background:#e40b00;
+	margin:0px 2px;
+	color:#ffffff;
+}
+.top_tools {
+	font-size:12px;
+}
+.toolsDiv {
+	padding:3px 15px;
+	width:540px;
+	margin-top:3px;
+	float:left;
+	overflow: hidden;
+}
+.toolsDiv ul li {
+	float:left;
+	display:inline;
+	width:82px;
+	height:78px;
+	margin-left:8px;
+}
+.toolsDiv ul li a {
+	display:block;
+	padding-top:5px;
+	width:82px;
+	height:78px;
+	text-align:center;
+	color:#CEEAF6;
+}
+.toolsDiv ul li a:hover {
+	background:url(../images/blue/tools/top_a_hover.png) 0 0px no-repeat;
+}
+.toolsDiv ul li a img {
+	display:block;
+	margin:0px auto;
+}
+.toolsDiv ul .selectbtn {
+	background:url(../images/blue/tools/top_a_hover.png) 0 0px no-repeat;
+}
+.toolsDiv2 {
+	padding:3px 15px;
+	width:540px;
+	margin-top:3px;
+	overflow: hidden;
+}
+.toolsDiv2 ul li {
+	float:left;
+	display:inline;
+	width:82px;
+	height:78px;
+	margin-left:8px;
+}
+.toolsDiv2 ul li a {
+	display:block;
+	padding-top:5px;
+	width:82px;
+	height:78px;
+	text-align:center;
+	color:#ffffff;
+	background:url(../images/blue/tools/top_a_hover2.png) 0 0px no-repeat;
+}
+.toolsDiv2 ul li a:hover {
+	color:#ffffff;
+	background:url(../images/blue/tools/top_a_hover.png) 0 0px no-repeat;
+}
+.toolsDiv2 ul li a img {
+	display:block;
+	margin:0px auto;
+}
+.toolsDiv2 ul .selectbtn {
+	background:url(../images/blue/tools/top_a_hover.png) 0 0px no-repeat;
+}
+a.downbtn {
+	display:block;
+	background:url(../images/blue/top_icon.png) 0 -252px no-repeat;
+	height:11px;
+	float:left;
+	width:14px;
+	margin-top:37px;
+	margin-left:10px;
+	cursor:pointer;
+}
+a.upbtn {
+	display:block;
+	background:url(../images/blue/top_icon.png) 0 -190px no-repeat;
+	height:11px;
+	float:left;
+	width:14px;
+	margin-top:37px;
+	margin-left:10px;
+	cursor:pointer;
+}
+.icon-controller {
+	background:url(../images/blue/tools.png) 0px 0px no-repeat;
+}
+.system_controller {
+	position:absolute;
+	bottom:2px;
+	right:5px;
+}
+.system_controller a {
+	background:#eaf2ff;
+}
+/***************************** north.html css end!!!   ****************************/
+
+
+/***************************** west.html css start!!!  ****************************/
+.sidernav_name {
+	background:url(../images/blue/left_nav.png) 0 0px no-repeat;
+	height:40px;
+	line-height:40px;
+	color:#ffffff;
+	padding-left:35px;
+	font-size:14px;
+	font-weight:bold;
+}
+.left_accordion li {
+	width:187px;
+}
+.left_accordion li a {
+	display:block;
+	height:36px;
+	line-height:36px;
+	border-bottom:1px solid #b9cad3;
+	border-right:1px solid #b9cad3;
+	font-size:14px;
+	color:#000000;
+	font-weight:bold;
+	background-color:#d9ebf3 ;
+	padding-left:15px;
+	text-decoration:none;
+
+}
+.left_accordion li a img {
+	padding-right:5px;
+}
+/********* sub-menu ********/
+/* list */
+.sub-menu {
+	
+}
+.sub-menu li {
+	height:34px;
+	list-style:none;
+}
+.sub-menu li a {
+	background:none;
+	font-size:12px;
+	font-weight:normal;
+	height:34px;
+	border-right:none;
+	padding-left:25px;
+	text-decoration:none;
+} 
+.sub-menu li a:hover {
+	background:url(../images/blue/left_nav.png) no-repeat 0px -174px;
+	color:#ffffff;
+}
+.sub-menu .activelink a {
+	background:url(../images/blue/left_nav.png) no-repeat 0px -90px;	
+	color:#ffffff;
+}
+.sub-menu .activelink a:hover {
+	background:url(../images/blue/left_nav.png) no-repeat 0px -90px;	
+	color:#ffffff;
+}
+/***************************** west.html css end!!!    ****************************/
+
+/**************************将jsp中的样式文件进行脱离  strat*********************************/
+/*
+* auto : alongSelf
+* date: 2015年1月27日 
+*/
+.west-manage-img{
+	display:inline-block;
+}
+
+.north-menubutton{
+	width:150px;
+	position: absolute;
+	top:2px;
+	right:2px;
+}
+
+.archives_main-resultDatas{
+	width:100%;
+	height:310px; 
+}
+
+.adminGiveAcl-tree{
+	text-align:left;
+	padding:5px;
+	top:5px
+}
+
+.adminGiveAcl-linkbutton{
+	text-align:center;
+	padding:5px
+}
+.adminGiveRole-adminRoleGrid{
+	height:500px;
+}
+.adminGiveRole-linkbutton{
+	text-align:center; 
+	height:20px;
+}
+
+article,aside,figure,footer,header,hgroup,menu,nav,section {
+	display: block;
+}
+
+.west {
+	width: 200px;
+	padding: 10px;
+}
+
+.north {
+	height: 100px;
+}
+.bgimage{
+	 background-image: images/login4.png;
+	 width: 100%;
+	 height: 100%;
+}
+.adminMng-select{
+	overflow: visible;
+}
+.adminMng-dlg{
+	width: 400px; 
+	height: 280px; 
+	padding: 10px 20px;
+}
+
+.adminMng-adminId-tel{
+	height:60px;
+}
+
+.fileAttributeGrid-select{
+	overflow: visible;width: 100%;height: 60px;
+}
+.fileAttributeGrid-center{
+	overflow: visible;height: 40px;
+}
+.fileAttributeGrid-panel{
+	width: 100%;height: 320px;
+}
+
+.fileAttributeGrid-dlg{
+	width: 370px; height: 250px; padding: 10px 20px;
+}
+.Menu_add-topDiv{
+	margin:20px 0;
+}
+.Menu_add-addMenu{
+	width:400px;
+	align:center;
+}
+
+.Menu_add-nav{
+	padding:10px 60px 20px 60px;
+}
+.Menu-add-iconCls{
+	padding-left: 18px; width: 115px;
+}
+
+.moduleMng-tabsMenu{
+	width:120px;
+}
+.roleMng-center{
+	overflow: visible;
+}
+
+.roleSetAcl-west{
+	width:210px;
+}
+
+.roleSetAcl-center{
+	width:500px;
+}
+
+.archives_ProjectLog-center{
+	position:relative;overflow: auto;
+}
+
+.archives_ProjectLog-resultDatas{
+	width:100%;height:310px
+}
+
+.archivesHeadInfo_edit-panel{
+	position: relative;height: 35px
+}
+.land_RegisterCard_edit-nrBody{
+	height:391px;overflow-y:auto;overflow-x:hidden;position:relative;
+}
+.position-relative{
+	position:relative;
+}
+
+.land_RegisterCard_View-center{
+	height:87%; position:relative;overflow: auto;
+}
+.noteCard_List-resultDatas{
+	width:100%;height:358px;
+}
+#coordFlash{
+	overflow-x:hidden;overflow-y:scroll;width:100%;height:350px;
+}
+
+.archives_left_div{
+	width:12%;
+	height:450px;
+	float:left;
+	padding-top:10px; 
+	background-color: #e1edff;
+}
+
+.archives_right_div{
+	width:88%;
+	float:left;
+}
+.cadastre_AddFZ-nrBody{
+	height:391px;overflow-y:auto;overflow-x:hidden;position:relative;
+}
+.width-130{
+	width:130px;
+}
+
+.width-120{
+	width:120px;
+}
+.width-50{
+	width:50px;
+}
+
+.width-80{
+	width:80px;
+}
+.width-200{
+	width:200px;
+}
+
+.width-100{
+	width:100px;
+}
+
+.width-600{
+	width:600px;
+}
+
+.width-1000{
+	width:1000px;
+}
+.check_Card-padding{
+	padding:10px 10px 10px 10px;
+}
+.noteCard_Add-padding{
+	padding:10px 40px 10px 40px;
+}
+.archivesFlask_Forward-p{
+	width:18%;padding:10px
+}
+.archivesHeadInfo-border{
+	border:1px solid #80b2c5;margin: 10px;
+}
+
+.archivesHeadInfo-backDialog{
+	width:400px;height:200px;
+}
+
+.archivesHeadInfo-htReason{
+	width:300px;height:100px;
+}
+.archivesHeadInfo-sjDialog{
+	width:350px;height:238px;position:relative;
+}
+
+.ChangeMng-dlg{
+	width: 950px; height: 420px; padding: 10px 20px;
+}
+.orgTree-orgDialog{
+	width:500px;height:300px;
+}
+
+.orgTree-btn{
+	padding-bottom: 5px;position:absolute;bottom:5px;left:130px;
+}
+.ServerMng-dlg_serviceInfo{
+	width: 400px; height: 400px; padding: 10px 20px;
+}
+#dlg_serviceInfo span{
+	color:red;
+}
+
+article,aside,figure,footer,header,hgroup,menu,nav,section {
+	display: block;
+}
+
+.west {
+	width: 200px;
+	padding: 10px;
+}
+
+.north {
+	height: 100px;
+}
+.bgimage{
+	 background-image: images/login4.png;
+	 width: 100%;
+	 height: 100%;
+}
+.data{
+	width: 7%;
+	text-align: center;
+}
+.len{
+	width: 3%;
+	text-align: center;
+}
+.bgstyle tr td {background-color: #FFF;}
+.bgstyle{
+	border-top:1px solid #b1caed;
+	border-left:1px solid #b1caed;
+	border-right:1px solid #b1caed;
+}
+.bgstyle tr td {
+	background-color: #FFF;
+	border-bottom:1px solid #b1caed;
+}
+
+.dhgsresult-daSysArchhead_dl{
+	width:70%; height: 80%; padding: 10px 20px;
+}
+
+.dhgsresult-daSysArchhead_dl-div{
+	width:500px;text-align:left;float:left;margin-left:10px;
+}
+.dhgsresult-daSysArchhead_dl-btn{
+	margin-left:10px;height:22px;
+}
+.dhgsresult-daSysArchhead_dl-font{
+	font-size: 14px; font-family: '微软雅黑'; font-weight: bold; color: #F73809; font-style: italic;
+}
+
+.dhgsresult-daSysArchhead_dl-tr{
+	text-align: center;height:24px;font-weight: bold;font-size: 13px;
+}
+.dhgsresult-daSysArchhead_dhxset{
+	width: 50%; height: 80%; padding: 10px 20px;
+}
+.dhgsresult-west{
+	width:50%;text-align: center;
+}
+
+.dhgsresult-center{
+	width:50%;text-align: center;border: 1
+}
+.dhgsresult-actionToColumns{
+	width:130px;margin-top:30px;
+}
+
+.dhgsresult-jspToAction{
+	width:130px;margin-top:30px;border: 1 ;
+}
+
+.dictionaryresult-dictionarydl{
+	width: 27%; height: 40%; padding: 10px 20px;
+}
+
+.AddOneTable-div{
+	margin-bottom:10px;background:#efefef;border:1px solid #d3d3d3;padding:4px;
+}
+.AddOneTable-createComments{
+	width: 500px;border:1px solid #ccc;height:20px;line-height:20px;
+}
+.AddOneTable-createName{
+	width: 200px;border:1px solid #ccc;height:20px;line-height:20px;
+}

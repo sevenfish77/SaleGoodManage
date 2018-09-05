@@ -1,0 +1,491 @@
+/*****by huqing 2015-1-8****/
+/*****************************   public css start!!!   ****************************/
+* {
+	margin:0px;
+	padding:0px;
+}
+body {
+	padding:0px;
+}
+.clear {
+	clear:both;
+}
+.m1 {
+	margin-top:8px;
+}
+.m2 {
+	margin-left:15px;
+}
+img {
+	border:0px;
+}
+ul,li {
+	list-style:none;
+}
+a.ablue {
+	color:#307fb1;
+	text-decoration:none;
+}
+a.ared {
+	color:#e40b00;
+	text-decoration:none;
+}
+a.ablack {
+	color:#000000;
+	text-decoration:none;
+}
+a.ablue:hover,a.ared:hover {
+	text-decoration:underline;
+}
+a.ablack:hover {
+	color:#004eff;
+	text-decoration:underline;
+}
+.left {
+	float:left;
+	display:inline;
+}
+/*****************************   public css end!!!     ****************************/
+.nrBox {
+	
+}
+.nrHead {
+	margin-left:5px;
+	margin-top:-10px;
+}
+.nrBody{
+	border:1px solid #80b2c5;
+	margin-left:5px;
+	margin-top:10px;
+}
+.titleBox {
+	border-bottom:1px solid #d0dee5;
+}
+.titleBox span {
+	border-bottom:2px solid #66c9f3;
+	line-height:24px;
+	padding:2px 4px;
+	font-size:14px;
+	font-weight:bold;
+}
+.btnBox{
+	padding-top:5px;
+}
+.cxBox {
+	background:#fcfce4;
+	border:1px solid #ffe4ca;
+	padding:10px;
+}
+.btns {
+	text-align:center;
+	margin-bottom: 5px;
+}
+.btns ul {
+	width:200px;
+}
+.btns li {
+	float:left;
+	margin-right:5px;
+}
+/* Tables
+---------------------------------------------------------------------*/
+.formTable {
+	font-size:12px;
+	margin:0px auto;
+}
+.formTable .tdFont01 {
+	text-align:center;
+}
+.tableBox {
+	border:1px solid #9bbacf;
+}
+.inTable {
+	background:#ffffff;
+	font-size:12px;
+}
+.tdbg00 {
+	background:#e3eef4;
+	text-align:center;
+	height:30px;
+}
+.tdbgxt {
+	color:#053862;
+	background:#e3eef4;
+	text-align:center;
+	height:30px;
+}
+.tdiv{width:100%;overflow:auto;word-break:break-all;white-space:norma;}
+.tdbg01 {
+	background:#e3eef4;
+	padding-right:5px;
+	text-align:right;
+	height:30px;
+	width: 60px;
+}
+.annouViwe{
+	background:#e3eef4;
+	padding-right:5px;
+}
+.tdbg02 {
+	background:#f1f6fa;
+	padding-left:5px;
+}
+.tdbg03 {
+	background:#e3eef4;
+	padding-right:5px;
+	text-align:right;
+	height:30px;
+	width:13%;
+}
+.tdbg04 {
+	background:#f1f6fa;
+	padding-left:5px;
+	width:37%;
+}
+.tdbg05 {
+	background:#f1f6fa;
+	padding-left:5px;
+	width:200px;
+}
+.tdbg06 {
+	height:30px;
+	text-align:center;
+	font-size:12px;
+	background:#e3eef4;
+}
+.tdbg07 {
+	height:30px;
+	text-align:center;
+	font-size:12px;
+	background:#f1f6fa;
+}
+/**锟叫憋拷锟斤拷*/
+.width1 {
+	width:140px;
+}
+/**锟斤拷锟斤拷锟斤拷锟�*/
+.width2 {
+	width:300px;
+}
+.width3 {
+	width:125px;
+}
+.width4 {
+	width:155px;
+}
+.width5 {
+	width:100px;
+}
+.width6{
+	width:630px;
+}
+.width7{
+	width:210px;
+}
+.width8{
+	width:60px;
+}
+.width9{
+	width:214px;
+}
+.width10{
+	width:280px;
+}
+.width11{
+	width:220px;
+}
+.width12{
+	width:200px;
+}
+.width13{
+	width:250px;
+}
+.frm_btn{
+	height:22px;
+	line-height:18px;
+	margin-left:5px;
+	border:1px solid #cccccc;
+	background-color:#e1edff; 	
+}
+.iconRed {
+	color:red;
+	padding-left:5px;
+}
+/* button
+---------------------------------------------------------------------*/
+.btn01 {
+	border:0px;
+	background:#0a7ab4;
+	color:#ffffff;
+	padding:2px 4px;
+	cursor:pointer;
+}
+.btn01_gray {
+	border:0px;
+	background:#999999;
+	padding:2px 4px;
+	cursor:pointer;	
+}
+/* Forms
+---------------------------------------------------------------------*/
+input,select {
+	vertical-align:middle;
+}
+input.full { 
+	font:12px "宋体", arial; /*font:16px arial;*/ 
+	height:20px; 
+	line-height:20px\9; 
+	_line-height:20px;  
+	padding-left:4px; 
+	border:1px solid #ace; 
+	overflow:hidden; 
+	outline:none; 
+}
+input[type="submit"],input[type="reset"],input[type="button"] {
+	border:0px;
+	cursor:pointer;
+}
+input.select_btn {
+	background:url(../images/blue/page_btn.png) no-repeat 0px 0px;
+	height:25px;
+	width:85px;
+	border:0px;
+	cursor:pointer;
+	font-size:12px;
+	font-weight:bold;
+	color:#ffffff;
+}
+input.select_btn2 {
+	background:url(../images/blue/page_btn2.png) no-repeat 0px 0px;
+	height:22px;
+	width:55px;
+	border:0px;
+	cursor:pointer;
+	font-size:12px;
+	font-weight:bold;
+	color:#ffffff;
+}
+input.reset_btn {
+	background:url(../images/blue/page_btn.png) no-repeat 0px -85px;
+	height:25px;
+	width:85px;
+	border:0px;
+	cursor:pointer;
+	font-size:12px;
+	font-weight:bold;
+	color:#ffffff;	
+}
+/* pagetools
+---------------------------------------------------------------------*/
+.pagetools ul li {
+	float:left;
+	display:inline;
+	margin-right:3px;
+}
+.pagetools ul li img {
+	vertical-align:middle;
+}
+.pagetools ul li a {
+	display:block;
+	font-size:12px;
+	text-decoration:none;
+	color:#000000;
+	width:77px;
+	height:31px;
+}
+.pagetools ul li a img {
+}
+.pagetools ul li a span {
+	line-height:31px;
+}
+.btnlink a {
+	background:url(../images/blue/pagetools/btnlink.png) no-repeat 0px 0px;
+	width:77px;
+	height:31px;
+	padding-top:4px\9;
+	text-align:center;
+}
+.btnlink a:hover {
+	background:url(../images/blue/pagetools/btnactive.png) no-repeat 0px 0px;
+	width:77px;
+	height:31px;
+	padding-top:4px\9;
+	text-align:center;
+}
+.btnactive {
+	background:url(../images/blue/pagetools/btnactive.png) no-repeat 0px 0px;
+	width:77px;
+	height:31px;
+	padding-top:4px\9;
+	text-align:center;	
+}
+.btndisable {
+	background:url(../images/blue/pagetools/btndisable.png) no-repeat 0px 0px;
+	width:77px;
+	height:31px;
+	padding-top:4px\9;
+	text-align:center;		
+}
+/*404
+---------------------------------------------------------------------*/
+.errorBox {
+	background:url(../images/blue/404.png) no-repeat 0px 0px;
+	width:490px;
+	height:175px;
+	margin-top:90px;
+	text-align:left;
+}
+.errorBox ul {
+	padding-top:56px;
+	padding-left:160px;
+}
+.errorBox p {
+	color:#000000;
+	font-family:"Microsoft Yahei","Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB",STHeiti !important;
+	font-size:22px;	
+}
+.errorBox span {
+	font-size:12px;
+	color:#717678;
+}
+.errorBox a {
+	display:block;
+	width:115px;
+	height:33px;
+	line-height:33px;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	color:#ffffff;
+	background:#4299ca;
+	text-decoration:none;
+	margin-top:10px;
+}
+.errorBox a:hover {
+	background:#287cac;
+} 
+/* sy
+---------------------------------------------------------------------*/
+.syBox {
+	font-size:12px;
+	margin:0px 10px;
+	padding:8px 0px;
+}
+.syBox p {
+	background:url(../images/blue/sy_icon.png) no-repeat 0px 5px;
+	padding-left:30px;
+	line-height:30px;
+}
+.line01 {
+	border-bottom:1px solid #dfe9ee;
+}
+.syTools li {
+	width:56px;
+	height:56px;
+	float:left;
+	display:inline;
+	text-align:center;
+	margin-left:15px;
+}
+.syTools li span {
+	display:block;
+}
+.btnAdd {
+	margin-left:15px;
+}
+a.btnAdd {
+	display:block;
+	background:url(../images/blue/sy_icon.png) no-repeat 0px -71px;	
+	width:113px;
+	height:23px;
+	line-height:23px;
+	padding-left:30px;
+	border:1px solid #becede;
+	text-decoration:none;
+	color:#2c69a2;
+}
+a.btnAdd:hover {
+	border:1px solid #0d9eb8;
+	color:#12518c;
+}
+.listBox {
+	width:344px;
+	height:236px;
+	border:1px solid #d3dbde;
+}
+.listBox2 {
+	width:344px;
+	height:236px;
+	border:1px solid #d3dbde;
+}
+.bt01 {
+	height:36px;
+	line-height:36px;
+	border-bottom:1px solid #d3dbde;
+	background:#f4f7f8;
+	position:relative;
+}
+.bt01 span {
+	font-size:14px;
+	font-weight:bold;
+	padding-left:20px;
+}
+.bt01 a {
+	position:absolute;
+	right:10px;
+	top:0px;
+}
+.listNews {
+	padding:10px;
+}
+.listNews li {
+	background:url(../images/blue/sy_icon.png) no-repeat 6px -132px;
+	padding-left:15px;
+	height:25px;
+	line-height:25px;
+	position:relative;
+}
+.listNews li a {
+	color:#000000;
+	text-decoration:none;
+}
+.listNews li a:hover {
+	color:#e40b00;
+}
+.listNews li span {
+	font-size:12px;
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+.tittle_gray {
+	background-image: url(../images/blue/bg_tittle.png);
+	text-align: center;
+	height: 22px;
+	font-weight: bold;
+	font-size: 13px;
+}
+.datagrid-tuxing {
+  padding: 0;
+  width: 100px;
+  height: 18px;
+  font-size: 1px;
+  text-align: center;
+}
+/*快捷菜单*/
+.listkjcd {
+	padding:10px;
+}
+.listkjcd li {
+	background:url(../images/blue/sy_icon.png) no-repeat 6px -132px;
+	padding-left:15px;
+	height:25px;
+	line-height:25px;
+}
+.listkjcd li a {
+	color:#000000;
+	text-decoration:none;
+}
+.listkjcd li a:hover {
+	color:#e40b00;
+}

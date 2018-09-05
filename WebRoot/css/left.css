@@ -1,0 +1,177 @@
+/* left */
+html, body, #leftbox {height: 100%;} 
+body > #leftbox {height: auto; min-height: 100%;}
+a {
+	text-decoration:none;
+}
+ul,li {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+.clearfix {
+	overflow:auto;
+	zoom:1;
+}
+#leftbox {
+	width:190px;
+	background:#31B0D5;
+}
+.titlefont {
+	color:#ffffff;
+	font-weight:bold;
+	font-size:14px;
+	display:block;
+	width:190px;
+	height:39px;
+	line-height:39px;
+	text-align:center;
+}
+/* leftnav */
+.leftnav .treeview li span {
+	display:block;
+    cursor: pointer;
+	height:32px;
+	line-height:32px;
+	font-size:14px;
+	color:#ffffff;
+	font-weight:bold;
+}
+.leftnav .treeview li span.pic {
+	padding-left:30px;
+	width:155px;
+	height:30px;
+	border:1px solid #ffffff;
+	background:#2EBAD1;
+}
+
+.leftnav .treeview li.expanded {	
+}
+.leftnav .treeview li.expanded ul {
+	padding-left:4px;
+}
+.leftnav .treeview li.expanded ul li.a1 {
+	display:block;
+	background: url(../images/nav/active.jpg) no-repeat 0 0;
+	height:28px;
+	line-height:28px;
+}
+.leftnav .treeview li.expanded ul li.a1 a {
+	color:#000000;
+	font-weight:bold;
+	width:146px;
+	padding-left:40px;
+}
+.leftnav .treeview li.expanded ul li.a2 {
+	display:block;
+	background: url(/WebApp/images/page.png) no-repeat 14px 7px;
+	height:28px;
+
+}
+.leftnav .treeview li.expanded ul img {
+	display:block;
+}
+.leftnav .treeview li.expanded ul li.a2 a {
+	color:#343331;
+	padding-left:40px;
+}
+.leftnav .treeview li.expanded ul li.a2 a:hover {
+	display:block;
+	background: url(/WebApp/images/ahover.jpg) no-repeat 0 0;
+	height:28px;
+	width:143px;
+	padding-left:40px;
+}
+.leftnav .treeview li.expanded ul li,.leftnav .treeview li.expanded ul li.a3 ul,.leftnav .treeview li.expanded ul li.a3 ul li,.leftnav .treeview li.expanded ul li.a3 ul li.a4 {
+	padding:0;
+	margin:0;
+}
+.leftnav .treeview li.expanded ul li.a3 .closefolder {
+	display:block;
+	background:url(../images/nav/st_folder.gif) no-repeat 14px 7px;
+	height:28px;
+	line-height:28px;
+	width:183px;	
+}
+.leftnav .treeview li.expanded ul li.a3 .openfolder {
+	display:block;
+	background:url(../images/nav/st_folder_open.gif) no-repeat 14px 7px;
+	height:28px;
+	line-height:28px;
+	width:183px;	
+}
+.leftnav .treeview li.expanded ul li.a3 span a {
+	display:block;
+	color:#343331;	
+	padding-left:40px;
+	height:25px;
+	padding-top:3px;
+	line-height:28px;
+}
+.leftnav .treeview li.expanded ul li.a3 ul li span a {
+	display:block;
+	color:#343331;	
+	padding-left:50px;
+	height:25px;
+	padding-top:0px;
+	line-height:28px;
+}
+.leftnav .treeview li.expanded ul li.a3 ul span {
+	display:block;
+	background:none;
+	width:183px;
+	background:url(../images/nav/page.png) no-repeat 24px 7px;
+}
+.leftnav .treeview li.expanded ul li.a3 ul {
+font-size:0;
+}
+.leftnav .treeview li.expanded ul li.a3 ul li.a4 {
+	display:block;
+	background:#A4CEE6;
+	height:28px;
+	line-height:28px;
+	width:183px;
+}
+.leftnav .treeview li.expanded ul li.a3 ul li.a4 a {
+	display:block;
+	color:#343331;
+	padding-left:50px;
+	height:28px;
+	line-height:28px;
+	font-weight:bold;
+}
+.leftnav .treeview li.expanded ul li.a3 ul li.a4 a:hover {
+	display:block;
+	height:28px;
+	line-height:28px;
+	width:133px;
+}
+.leftnav .treeview li.expanded ul li.a3 ul li {
+	display:block;
+	height:28px;
+	line-height:28px;	
+}
+
+.leftnav .treeview li.expanded ul li.a3 ul li a:hover  {
+	display:block;
+	background: url(../images/nav/ahover2.jpg) no-repeat 0 0;
+	height:28px;
+	line-height:28px;
+	width:133px;
+}
+
+.leftnav .treeview li.expanded ul{
+    display:none;
+}
+.leftnav .treeview li.expanded ul li span {
+	font-size:12px;
+	font-weight:normal;
+	color:#343331;
+}
+.leftnav .treeview li.collapsed {
+    background:url(../images/nav/treeview-expanded.jpg) no-repeat 0 0;
+}
+.leftnav .treeview li.collapsed ul{
+    display:none;
+}
+

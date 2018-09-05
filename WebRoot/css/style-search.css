@@ -1,0 +1,75 @@
+
+/* 搜索信息开始 */
+.searchinfo {
+	padding:5px 5px 0px 5px;
+}
+.search_input {
+	width:98%;
+	height:23px;
+	line-height:23px;
+	border:1px solid #e8e8e8;
+	background:#ffffff;
+	
+}
+
+
+.search_head_td {
+	height:29px;
+	line-height:29px;
+	text-align:right;
+	background:#FFC;
+}
+.search_content_td {
+	padding-left:2px;
+	background:#FFFFFF;
+	text-align:left;
+	display:inline_block;
+}
+
+
+/* 表格信息结束 */
+
+.head_width15 {
+	width:15%;
+}
+.content_width15 {
+	width:18%;
+}
+.content_width25 {
+	width:19%;
+}
+.search_div_input{
+	width:100%;
+	margin: 0px;
+}
+.search_div_input1{
+	margin-top:5px;
+	margin-bottom:5px;
+	float:left;
+}
+.search_div_input2{
+	margin-top:5px;
+	margin-left:5px;
+	margin-bottom:5px;
+	float:left;
+	
+}
+.search_box {
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  border-width: 1px;
+  border-style: solid;
+  overflow: hidden;
+  border-color: #95B8E7;
+  background-color: #fff;
+  margin-bottom:5px;
+}
+.search_button{
+	background-color: #ffffff;
+	padding-bottom: 5px;
+	
+}
+/* 提示说明结束 */
+

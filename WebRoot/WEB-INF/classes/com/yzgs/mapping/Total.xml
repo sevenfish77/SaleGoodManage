@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.yzgs.domain.Total">
+                  
+    <resultMap type="com.yzgs.domain.MonthGoodGuoQi" id="MonthGoodGuoQi">
+         <result column="month" property="month"/>
+        <result column="storePh" property="storePh"/>
+        <result column="storeJhs" property="storeJhs"/>
+        <result column="storeGqs" property="storeGqs"/>
+        <result column="storeGql" property="storeGql"/>
+    </resultMap>
+	
+    
+	<select id="getZSRByMonth" parameterType="java.lang.String" resultType="java.lang.String">
+	   select IFNULL(sum(saleMoney),0) as saleMoney from salerecord where month(saleDate)=#{month,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="getZZCByMonth" parameterType="java.lang.String" resultType="java.lang.String">
+	    select IFNULL(sum(a.price),0) as price from (
+				select projectprice as price,projectdate as pdate from otherproject
+				union
+				select goodSumMoney as price,storedate  as pdate from goodstore) a where month(a.pdate) =#{month,jdbcType=VARCHAR}
+	</select> 
+	
+	<select id="getZXSByMonthAndGoodId" parameterType="java.util.Map" resultType="java.lang.String">
+	    select IFNULL(sum(a.salemoney),0) as salemoney from salerecord a left join  goodstore b on a.storeph=b.storeph where month(a.saleDate)=#{month,jdbcType=VARCHAR} and b.goodId=#{goodId,jdbcType=VARCHAR}
+	
+	</select>
+	
+
+	
+	
+	<select id="getZJJByMonthAndGoodId" parameterType="java.util.Map" resultType="java.lang.String">
+	select  IFNULL(sum(b.goodJprice*a.saleNum),0) from salerecord a left join  goodstore b on a.storeph=b.storeph  where month(a.saleDate)=#{month,jdbcType=VARCHAR} and b.goodId=#{goodId,jdbcType=VARCHAR}
+	</select>
+	
+	
+	<select id="getZGQByMonthAndGoodId" parameterType="java.util.Map" resultType="java.lang.String">
+	 select  IFNULL(sum(sumMoney),0) from goodGuoQi  where month(goodGuoQiDate)=#{month,jdbcType=VARCHAR} and goodId=#{goodId,jdbcType=VARCHAR}
+	</select>
+	
+	<!-- 商品过期 -->
+	<select id="getMonthGoodGuoQi" parameterType="java.util.Map" resultMap="MonthGoodGuoQi">
+	<!-- mysql的ifnull语句，left join没有关联到的都会置成NULL， 跟你ifnull没有关系 -->
+	select month(a.storeDate) as month,a.storePh,IFNULL(a.storeNum,0) as storeJhs,IFNULL(b.goodNum,0) as storeGqs,(IFNULL(b.goodNum,0)/IFNULL(a.storeNum,0))*100 as storeGql,c.goodname as goodName from goodstore a left join goodGuoqi b  on a.storePh=b.storePh left join good c on a.goodId=c.id  where  month(a.storeDate)=#{month,jdbcType=VARCHAR} and a.goodId=#{goodId,jdbcType=VARCHAR}
+	</select>
+	
+</mapper>
+
